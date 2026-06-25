@@ -1,68 +1,104 @@
 # KRAZ Recruitment Intelligence Platform
 
-An end-to-end recruitment intelligence platform built with Python and Streamlit.
+An end-to-end data engineering and business intelligence platform for extracting, processing, ranking, and visualizing recruitment agency data.
 
-## Overview
+## Project Summary
 
-This project automates the extraction, cleaning, filtering, ranking, and analysis of recruitment agencies listed in the Polish KRAZ registry.
+The KRAZ Recruitment Intelligence Platform automates the collection and processing of recruitment agency information from the Polish KRAZ registry.
 
-The platform identifies agencies that provide services for foreign workers, prioritizes high-value leads, and generates outreach-ready datasets through a fully automated pipeline.
+The system extracts agency records through API-based data collection, cleans and standardizes the data, identifies agencies that provide services for foreign workers, ranks leads based on predefined business rules, and generates outreach-ready datasets for recruitment and business development activities.
 
-## Features
+A Streamlit dashboard provides real-time visibility into pipeline outputs, lead statistics, and agency intelligence.
 
-* Automated KRAZ registry extraction
-* Data normalization and validation
-* Foreign-worker agency filtering
-* Lead scoring and prioritization
-* Outreach dataset generation
+## Key Features
+
+* Automated API-based data extraction
+* Data cleansing and normalization
+* Foreign-worker recruitment agency identification
+* Lead ranking and prioritization
+* Outreach dataset preparation
 * Interactive Streamlit dashboard
 * Pipeline automation
-* Logging and monitoring
+* Data quality controls
+* Deduplication and filtering
 
 ## Technology Stack
+
+### Data Engineering
 
 * Python
 * Pandas
 * Requests
 * OpenPyXL
+
+### Business Intelligence
+
 * Streamlit
-* Git & GitHub
+* Data Visualization
+* Lead Scoring
+* KPI Reporting
 
-## Pipeline Workflow
+### Automation
 
-1. Extract registry records
-2. Normalize raw data
+* Pipeline Orchestration
+* Automated Data Processing
+* Batch Execution
+* Logging and Monitoring
+
+## Pipeline Architecture
+
+1. Extract recruitment agency records
+2. Normalize and validate source data
 3. Filter agencies serving foreign workers
-4. Rank and score leads
+4. Score and prioritize leads
 5. Generate outreach-ready datasets
-6. Visualize insights through Streamlit
-
-## Dashboard
-
-The Streamlit dashboard provides:
-
-* Lead statistics
-* Agency search
-* Pipeline controls
-* Data refresh functionality
-* Live status monitoring
+6. Display results through an interactive dashboard
 
 ## Project Structure
 
-extractor.py → Data extraction
+extractor.py
+Data extraction from KRAZ API
 
-normalize.py → Data cleaning
+normalize.py
+Data cleaning and standardization
 
-check_foreigners.py → Foreign-worker filtering
+check_foreigners.py
+Agency filtering and classification
 
-rank_leads_v2.py → Lead scoring
+rank_leads_v2.py
+Lead scoring and prioritization
 
-prepare_outreach.py → Outreach dataset generation
+prepare_outreach.py
+Outreach dataset generation
 
-dashboard.py → Streamlit dashboard
+dashboard.py
+Business intelligence dashboard
 
-run_pipeline.py → Full pipeline automation
+run_pipeline.py
+End-to-end pipeline execution
+
+## Business Value
+
+The platform reduces manual lead research effort by automating the identification and prioritization of recruitment agencies relevant to international workforce placement.
+
+## Dashboard Features
+
+* Pipeline status monitoring
+* Lead intelligence metrics
+* Agency search functionality
+* Outreach dataset insights
+* Automated refresh capability
+
+## Future Enhancements
+
+* Cloud deployment
+* PostgreSQL integration
+* Automated scheduling
+* Email outreach automation
+* Advanced lead scoring models
+* Interactive geospatial analytics
 
 ## Author
 
 Temple Tochukwu
+BSc Geology | Data Engineering | Business Intelligence | Automation
