@@ -1,102 +1,105 @@
 # KRAZ Recruitment Intelligence Platform
 
-An end-to-end data engineering and business intelligence platform for extracting, processing, ranking, and visualizing recruitment agency data.
+An end-to-end data engineering and business intelligence platform built to extract, process, analyze, and prioritize recruitment agencies from Poland's KRAZ registry.
 
-## Project Summary
+## Live Demo
 
-The KRAZ Recruitment Intelligence Platform automates the collection and processing of recruitment agency information from the Polish KRAZ registry.
+Streamlit Dashboard: (https://kraz-intelligence-vaad5qulvch34yebrzhxqx.streamlit.app/)
 
-The system extracts agency records through API-based data collection, cleans and standardizes the data, identifies agencies that provide services for foreign workers, ranks leads based on predefined business rules, and generates outreach-ready datasets for recruitment and business development activities.
+## Overview
 
-A Streamlit dashboard provides real-time visibility into pipeline outputs, lead statistics, and agency intelligence.
+The KRAZ Recruitment Intelligence Platform automates the collection and analysis of recruitment agency data from the Polish KRAZ registry.
+
+The platform extracts agency records, cleans and standardizes data, identifies agencies serving foreign workers, ranks leads, and produces outreach-ready datasets for recruitment and business development activities.
 
 ## Key Features
 
-* Automated API-based data extraction
-* Data cleansing and normalization
-* Foreign-worker recruitment agency identification
+* Automated extraction of KRAZ agency records
+* Data normalization and cleansing
+* Foreign-worker agency identification
 * Lead ranking and prioritization
-* Outreach dataset preparation
+* Outreach-ready dataset generation
 * Interactive Streamlit dashboard
-* Pipeline automation
-* Data quality controls
-* Deduplication and filtering
+* Search and filtering capabilities
+* Downloadable lead datasets
 
 ## Technology Stack
 
-### Data Engineering
-
 * Python
 * Pandas
-* Requests
-* OpenPyXL
-
-### Business Intelligence
-
 * Streamlit
-* Data Visualization
-* Lead Scoring
-* KPI Reporting
+* OpenPyXL
+* Requests
+* Playwright
+* Git & GitHub
 
-### Automation
+## Data Pipeline
 
-* Pipeline Orchestration
-* Automated Data Processing
-* Batch Execution
-* Logging and Monitoring
-
-## Pipeline Architecture
-
-1. Extract recruitment agency records
-2. Normalize and validate source data
-3. Filter agencies serving foreign workers
-4. Score and prioritize leads
+1. Extract agency data from KRAZ registry
+2. Normalize and clean records
+3. Identify agencies serving foreign workers
+4. Rank agencies using lead-scoring logic
 5. Generate outreach-ready datasets
-6. Display results through an interactive dashboard
+6. Visualize results through Streamlit dashboard
 
 ## Project Structure
 
-extractor.py
-Data extraction from KRAZ API
+```text
+kraz-intelligence/
+│
+├── dashboard.py
+├── extractor.py
+├── normalize.py
+├── check_foreigners.py
+├── rank_leads_v2.py
+├── prepare_outreach.py
+├── run_pipeline.py
+│
+├── data/
+│   ├── demo_foreigners.xlsx
+│   ├── demo_ranked_leads.xlsx
+│   └── demo_outreach.xlsx
+│
+├── requirements.txt
+└── README.md
+```
 
-normalize.py
-Data cleaning and standardization
+## Results
 
-check_foreigners.py
-Agency filtering and classification
+* 7,655+ agency records processed
+* 2,208 agencies identified as serving foreign workers
+* 2,022 ranked recruitment leads generated
+* 1,595 outreach-ready leads prepared
 
-rank_leads_v2.py
-Lead scoring and prioritization
+## Dashboard Preview
 
-prepare_outreach.py
-Outreach dataset generation
+Add screenshots here.
 
-dashboard.py
-Business intelligence dashboard
+## Installation
 
-run_pipeline.py
-End-to-end pipeline execution
+```bash
+pip install -r requirements.txt
+streamlit run dashboard.py
+```
 
-## Business Value
+## Skills Demonstrated
 
-The platform reduces manual lead research effort by automating the identification and prioritization of recruitment agencies relevant to international workforce placement.
-
-## Dashboard Features
-
-* Pipeline status monitoring
-* Lead intelligence metrics
-* Agency search functionality
-* Outreach dataset insights
-* Automated refresh capability
+* Data Engineering
+* ETL Development
+* Data Cleaning
+* Data Quality Management
+* Business Intelligence
+* Dashboard Development
+* Automation
+* Git Version Control
 
 ## Future Enhancements
 
-* Cloud deployment
-* PostgreSQL integration
+* Interactive visual analytics
+* Docker deployment
 * Automated scheduling
-* Email outreach automation
-* Advanced lead scoring models
-* Interactive geospatial analytics
+* PostgreSQL integration
+* Lead scoring optimization
 
 ## Author
 
