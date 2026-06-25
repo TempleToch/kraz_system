@@ -45,22 +45,21 @@ def run_script(script_name):
 def load_data():
 
     ranked = pd.read_excel(
-        DATA / "foreigners_ranked_leads_v2.xlsx",
+        DATA / "demo_ranked_leads.xlsx",
         engine="openpyxl"
     )
 
     outreach = pd.read_excel(
-        DATA / "outreach_ready_leads.xlsx",
+        DATA / "demo_outreach.xlsx",
         engine="openpyxl"
     )
 
     foreigners = pd.read_excel(
-        DATA / "foreigners_agencies.xlsx",
+        DATA / "demo_foreigners.xlsx",
         engine="openpyxl"
     )
 
     return ranked, outreach, foreigners
-
 
 # =====================================
 # SIDEBAR
@@ -356,10 +355,7 @@ with open(
 st.divider()
 
 file_time = datetime.fromtimestamp(
-    (
-        DATA /
-        "foreigners_ranked_leads_v2.xlsx"
-    ).stat().st_mtime
+    (DATA / "demo_ranked_leads.xlsx").stat().st_mtime
 )
 
 st.caption(
