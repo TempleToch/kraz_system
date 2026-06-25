@@ -327,26 +327,27 @@ st.subheader(
 )
 
 with open(
-    DATA / "foreigners_ranked_leads_v2.xlsx",
+    DATA / "demo_ranked_leads.xlsx",
     "rb"
 ) as f:
 
     st.download_button(
-        "Download Ranked Leads",
+        "Download Demo Ranked Leads",
         f,
-        file_name="foreigners_ranked_leads_v2.xlsx"
+        file_name="demo_ranked_leads.xlsx"
     )
 
 with open(
-    DATA / "outreach_ready_leads.xlsx",
+    DATA / "demo_outreach.xlsx",
     "rb"
 ) as f:
 
     st.download_button(
-        "Download Outreach Leads",
+        "Download Demo Outreach Leads",
         f,
-        file_name="outreach_ready_leads.xlsx"
+        file_name="demo_outreach.xlsx"
     )
+
 
 # =====================================
 # LAST UPDATE
